@@ -1,0 +1,123 @@
+<div class="nav">
+    <app-navbar></app-navbar>
+    </div>
+    <main>
+           
+            <div *ngIf="!close" class="Modal-Background toggle-Modal">
+                    <div class="Center-Block Absolute-Center is-Fixed is-Variable Modal" id="Fixed-Modal">
+                      <div class="Center-Content">
+                            <div class="title" > 
+                                    <h3>Edit Profile</h3> <p class="x" (click)="closeWindow()">X</p></div> 
+                                    
+                            <form [formGroup]="edit">
+                                 
+                                 <label for="lname">Bio</label> 
+                                    <input formControlName="bio" ng-required="expression" class="name"type="text" placeholder="Bio" id="fname" name="fname">
+                                    <label for="lname">Occupation</label>
+                                    <input formControlName="occupation" ng-required="expression" class="name"type="text" placeholder="Occupation"id="lname" name="lname">
+                                    <label for="lname">Where are you from ?</label>
+                                    <input formControlName="birth_place" ng-required="expression" class="ess"type="text" placeholder="birth_place"id="lname" name="lname">
+                                    <label for="lname">Where are you now ?</label>
+                                    <input formControlName="current_location" ng-required="expression" class="ess"type="text" placeholder="current_location"id="lname" name="lname">
+                                    <label for="lname">Change a profile picture</label>
+                                    <input type="file" formControlName="picture" (change)="processPhoto($event)" /> 
+                                    <button (click)="submit()">Submit</button>
+                                    </form>
+                      </div>
+                    </div>
+                  </div>
+            <div id="profile-upper">
+               
+                <div id="profile-d">
+                    <div id="profile-pic">
+                        <img src="{{info.picture}}">    
+                    </div>
+                    <div id="u-name">{{info.first_name}} {{info.last_name}}</div>
+                    <button class="button button5" *ngIf="!names.includes(info.first_name) && !requested.includes(my_id) && my_id !== this.info.id" id="request-button" (click)="request()">Add Friend</button>
+
+                </div>
+                <div id="black-grd"></div>
+            </div>
+            <div id="main-content">
+                <div class="tb">
+                    <div class="td" id="l-col">                   
+                        <div class="l-cnt">
+                            <div class="cnt-label">
+                                <i class="l-i" id="l-i-i"></i>
+                                <span>Intro</span>
+                                <div *ngIf="my_id === info.id" class="lb-action"><i (click)="openWindow()" class="material-icons">edit</i></div>
+                            </div>
+                            <div id="i-box">
+                                <div id="intro-line">{{info.occupation}}</div>
+                                <div id="u-occ">{{info.birthday}}</div>
+                                <div id="u-occ">{{info.occupation}}</div>
+                                <div id="u-loc">{{info.current_location}}</div>
+                            </div>
+                        </div>
+                        <div class="l-cnt l-mrg">
+                            <div class="cnt-label">
+                                <i class="l-i" id="l-i-p"></i>
+                                <span>Photos</span>
+                            </div>
+                            <div id="photos" *ngFor="let x of photos">
+                                <div class="tb">
+                                    <div class="tr">
+                                        <div style="background-image:url({{x.picture}})" class="td"></div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                   
+                        <div id="t-box">
+                            <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Advertising</a> <a href="#">Ad Choices</a> <a href="#">Cookies</a> <span id="t-more">More<i class="material-icons">arrow_drop_down</i></span>
+                            <div id="cpy-nt">Facebook &copy; <span id="curr-year"></span></div>
+                        </div>
+                    </div>
+                    <div class="td" id="m-col">
+                        <div class="m-mrg" id="p-tabs">
+                            <div class="tb">
+                                <div class="td">
+                                    <div class="tb" id="p-tabs-m">
+                                        <div class="td" (click)='homeLink()'><i class="material-icons">Timeline</i><span>TIMELINE</span></div>
+                                        <div class="td active"><i class="material-icons">Friends</i><span>FRIENDS</span></div>
+                                        <div class="td" (click)='photosLink()'><i class="material-icons">Photos</i><span>PHOTOS</span></div>
+                                        <div class="td " *ngIf="my_id === this.info.id" (click)='requestLink()'><i class="material-icons">Requests</i><span>REQUESTS</span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="m-mrg" id="composer">
+                            <div id="c-tabs-cvr">
+                                <div class="tb" id="c-tabs">
+                                    <div class="td active"><i class="material-icons">subject</i><span>Make Post</span></div>
+                                    <div class="td"><i class="material-icons">camera_enhance</i><span>Photo/Video</span></div>
+                                    <div class="td"><i class="material-icons">videocam</i><span>Live Video</span></div>
+                                    <div class="td"><i class="material-icons">event</i><span>Life Event</span></div>
+                                </div>
+                            </div>
+                            <div id="c-c-main">
+                                <div class="tb">
+                                    <div class="td" id="p-c-i"><img src="https://imagizer.imageshack.com/img921/3072/rqkhIb.jpg" alt="Profile pic"></div>
+                                    <div class="td" id="c-inp">
+                                        <input type="text" placeholder="What's on your mind?">
+                                    </div>
+                                </div>
+                                <div id="insert_emoji"><i class="material-icons">insert_emoticon</i></div>
+                            </div>
+                        </div> -->
+                        
+                                <div *ngFor="let x of friends" class="card">
+                                        
+                                        <img *ngIf="x.picture !== null" src="{{x.picture}}" alt="Avatar" >
+                                          <h4><a class="hover" (click)='friendsRoute(x.user_id)'>{{x.first_name}} {{x.last_name}}</a></h4>
+                                          
+                                        
+                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </main>

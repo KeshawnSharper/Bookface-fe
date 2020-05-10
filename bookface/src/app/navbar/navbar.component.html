@@ -1,0 +1,79 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+ 
+  <nav id="navbar">
+    <!--Left-side items-->
+    <img (click)="home()" id="logo" src="https://www.freeiconspng.com/uploads/facebook-f-logo-white-background-21.jpg">
+  
+    <div id="searchBar">
+            <form [formGroup]="searchForm">
+      <input formControlName="name" type="text" placeholder="search">
+      <div id="searchIconContainer">
+        <img (click)="search()" id="searchIcon" src="https://cdn2.iconfinder.com/data/icons/picons-basic-1/57/basic1-015_search_zoom_find-512.png"></div>
+        </form>
+    </div>
+    <div *ngIf="!close" class="Modal-Background toggle-Modal">
+        <div class="Center-Block Absolute-Center is-Fixed is-Variable Modal" id="Fixed-Modal">
+          <div class="Center-Content">
+                <div class="title" > 
+                        <h3>Are you sure you want to log out?</h3> <p class="x" (click)="closeWindow()">X</p></div> 
+                        
+      <button (click)="closeWindow()" class="button button5">Cancel</button>
+      <button (click)="logOut()" class="button button3">Log Out</button>
+      
+                       
+          </div>
+        </div>
+      </div>
+    <!--Right-side items-->
+    <div id="rightSide">
+      <div id="mainLinks">
+          <div id="accountLinks" class="navLink">
+          
+              <div id="dropdownMenu" class="smallNavLink" (click)="openWindow()">
+                  Log Out</div>
+            </div>
+        <div id="accountLinks" class="navLink">
+          
+          <div id="dropdownMenu" class="smallNavLink">
+            <img (click)="moreToggle()"src="https://cdn3.iconfinder.com/data/icons/arrows-76/16/drop-down-arrow-01-512.png" class="icon"></div>
+            <div class="more-content" *ngIf="more">
+                <a href="/profile/{{my_id}}/photos">Photos</a>
+                <a href="/profile/{{my_id}}/friends">Friends</a>
+                <a href="/profile/{{my_id}}/requests">Requests</a>
+          </div>
+        </div>
+        <div id="secLinks" class="navLink">
+          <div class="dropdown-friends" id="friendsLink" class="smallNavLink" >
+            <img (click)="requestsToggle()" src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/friends-512.png" class="icon"> <div *ngIf="friend_requests.length > 0" class="circle">{{friend_requests.length}}</div> 
+            <div *ngIf="requests && friend_requests.length > 0 " class="dropdown-content">
+                <div class="requests" *ngFor="let x of friend_requests">
+                <a href="/profile/{{x.id}}">{{x.first_name}} {{x.last_name}}</a> 
+                <button (click)='add_friend(x.request_id)'> Accept</button>
+                <button (click)='del_friend(x.request_id)'> Decline</button>
+              </div>
+          </div>
+          </div>
+          <div id="inboxLink" class="smallNavLink">
+            <img (click)="messagesToggle()" src="https://cdn3.iconfinder.com/data/icons/fillies-large/64/envelope-512.png" class="icon"> <div *ngIf="messages.length > 0" class="circle">{{messages.length}}</div> 
+          </div>
+            <div class="inbox-content" *ngIf="newMessages && messages.length > 0 ">
+                <div class="inbox" *ngFor="let x of messages">
+                <a href="/messages/{{x.sender_id}}">{{x.first_name}} {{x.last_name}} : {{x.message}}</a>
+              </div>
+          </div>
+        </div>
+      
+        <div id="homeLink" class="navLink">
+          <div class="linkText"> <a href="/home">Home</a></div>
+        </div>
+        <div id="profileLink" class="navLink">
+          <img src="https://www.sltravelbelize.com/wp-content/uploads/2015/02/profile-placeholder.gif" class="icon">
+          <div class="linkText"> <a href="/profile/{{my_id}}">Profile</a> </div>
+        </div>
+        
+      </div>
+    </div>
+  
+  </nav>

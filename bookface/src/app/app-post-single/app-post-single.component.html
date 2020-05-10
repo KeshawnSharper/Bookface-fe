@@ -1,0 +1,63 @@
+
+                        <div id="app">
+                            <div data-reactroot="">
+                              <div class="creator">
+                                <img src="https://picsum.photos/150/150">
+                                <div>
+                                  <p (click)="link(x.user_id)">{{post_info.first_name}} {{post_info.last_name}}</p>
+                                  <p>
+                                    <!-- react-text: 7 -->4
+                                    <!-- /react-text -->
+                                    <!-- react-text: 8 -->h
+                                    <!-- /react-text -->
+                                  </p>
+                                </div>
+                              </div>
+                              <p class="message">{{post_info.message}}</p>
+                              <div class="left"> {{post_info.likes}} likes {{post_info.comments}} comments</div>
+                              <div class="bar">
+                                  <div class="icon-row">
+                                  <div class="icon-left"> <fa-icon style="cursor:pointer" (click)="like(x)"[icon]="faThumbsUp"></fa-icon> Like </div> 
+                                  <div class="icon-right"><fa-icon style="cursor:pointer" [icon]="faCommentAlt" (click)="submit()"></fa-icon> Comment</div>
+                                </div>
+                                </div>
+                              <div>
+                                  <form [formGroup]="newPost">
+                                      <p class="post_error" *ngIf="post_error">
+                                          Please make a longer post
+                                        </p>
+                                  <div class="input">
+                                   
+                                      <img>
+                                     
+                                       
+                                      <textarea formControlName="message" placeholder="Write a comment..." style="height: 32px;"></textarea>
+                                      <button id="submit" (click)="submit()"type="submit">Submit</button> 
+                                    </div>
+                                   
+                                  </form>
+                                 
+                                <div *ngFor="let x of posts" class="comment-section">
+                                  <div class="single-comment">
+                                    <img>
+                                    <div class="single-container">
+                                      <span>{{x.first_name}} {{x.last_name}}</span>
+                                      <span>{{x.message}}</span>
+                                      
+                                    </div>
+                                    <div class="buttons">
+                                      
+                                      <p>
+                                        <!-- react-text: 25 -->
+                                        <!-- /react-text -->
+                                        <!-- react-text: 26 -->h
+                                        <!-- /react-text -->
+                                      </p>
+                                    </div>
+                                  </div>
+                                
+                              
+                              </div>
+                            </div>
+                          </div>
+       

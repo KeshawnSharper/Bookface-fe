@@ -1,0 +1,19 @@
+<body>
+
+    <app-navbar></app-navbar>
+    
+<div class="row">
+  <div class="column-1"><app-sidebar></app-sidebar></div>
+  <div class="column-2" >
+        <div class="search-box" *ngFor="let x of results">
+          <img src="https://picsum.photos/150/150" width="90" height="100" alt=""> <a href="/profile/{{x.id}}">{{x.first_name}} {{x.last_name}}</a>
+          
+          <button *ngIf="!names.includes(info.first_name) && !requested.includes(my_id)" id="request-button" (click)="request(x.id)">Add Friend</button>
+        </div>
+        
+  </div>
+  <button id="submit" (click)="pon()"type="submit">Results</button> 
+  <div class="column-3"><app-noti-bar></app-noti-bar></div>
+  <div class="column-4"><app-messages></app-messages></div>
+</div>
+</body>    

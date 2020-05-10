@@ -1,0 +1,52 @@
+
+    
+
+	<div class="side-left01">
+        <div *ngIf="!close" class="Modal-Background toggle-Modal">
+                <div class="Center-Block Absolute-Center is-Fixed is-Variable Modal" id="Fixed-Modal">
+                  <div class="Center-Content">
+                        <div class="title" > 
+                                <h3>Are you sure you want to log out?</h3> <p class="x" (click)="closeWindow()">X</p></div> 
+                                
+                                <button (click)="closeWindow()" class="button button5">Cancel</button>
+                                <button (click)="logOut()" class="button button3">Log Out</button>
+                                
+                               
+                  </div>
+                </div>
+              </div>
+    <div class="sections">
+        <ul>
+            <li>
+                <a href="/profile/{{id}}">
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="/profile/{{id}}/photos">
+                    <p>Photos</p>
+                </a>
+            </li>
+            <li>
+                <a href="/profile/{{id}}/friends">
+                    <p>Friends</p>
+                </a>
+            </li>
+            <li>
+                <a href="/profile/{{id}}/requests">
+                    <p>Friend Requests</p>
+                </a>
+            </li>
+            <li>
+                
+                        
+                                
+                    <p class="logout" (click)="openWindow()"> Log Out</p>
+                
+            </li>
+            
+            
+        </ul>
+    </div>
+    
+</div>

@@ -1,0 +1,126 @@
+.fb-card {
+    box-sizing: border-box;
+    margin-top:10px;
+    padding: 12px;
+    max-width: 500px;
+    width: 25rem;
+    border: 1px solid #dddfe2;
+    border-radius: 4px;
+    font-family: "SF Optimized", system-ui, -apple-system, system-ui,
+      ".SFNSText-Regular", sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    background-color: #fff;
+    &__user {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__profile-picture {
+      padding-right: 8px;
+    }
+  
+    &__profile-img {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      background-color: #efefef;
+    }
+  
+    &__user-details {
+      font-size: 14px;
+      line-height: 1.38;
+      color: #90949c;
+  
+      a {
+        color: #365899;
+        text-decoration: none;
+        font-weight: bold;
+      }
+  
+      svg {
+        fill: currentColor;
+      }
+    }
+  
+    &__post-body {
+      margin: 6px 0;
+      font-size: 14px;
+      line-height: 1.38;
+    }
+  
+    &__preview {
+      border: 1px solid #dddfe2;
+  
+      img {
+        width: 100%;
+        height: autp;
+      }
+    }
+  
+    &__preview-img {
+      display: block;
+      width: 370px;
+      height: 250px;
+      background-color: #efefef;
+    }
+  
+    &__preview-body {
+      padding: 12px;
+    }
+  
+    &__preview-title,
+    &__preview-description,
+    &__preview-url {
+      margin: 0;
+      color: rgb(29, 33, 41);
+    }
+  
+    &__preview-title {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+  
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  
+    &__preview-description,
+    &__preview-url {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  
+    &__preview-description {
+      margin-bottom: 9px;
+    }
+  
+    &__preview-url {
+      color: #90949c;
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .row{
+      display:inline-flex;
+      
+  }
+  .left{
+    margin-left: 2rem;
+    margin-right: 8rem;
+  }
+  .icon-row{
+    display:inline-flex;
+    
+}
+.icon-left{
+    margin-left: 5rem;
+    margin-right: 4rem;
+  }
+  
+  body {
+  }

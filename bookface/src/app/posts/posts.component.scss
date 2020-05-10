@@ -1,0 +1,324 @@
+.status{
+    margin-left:-76px;
+}
+.container{
+background-color:rgb(245, 246, 247);
+border-bottom-color:rgb(221, 223, 226);
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+border-bottom-style:solid;
+border-bottom-width:1px;
+border-top-left-radius:2px;
+border-top-right-radius:2px;
+color:rgb(29, 33, 41);
+direction:ltr;
+display:block;
+font-family:"Fix for Mac Chrome 80", system-ui, -apple-system, system-ui, ".SFNSText-Regular", sans-serif;
+font-size:12px;
+font-weight:700;
+height:16px;
+line-height:16.08px;
+overflow-wrap:break-word;
+padding-bottom:8px;
+padding-left:0px;
+padding-right:24px;
+padding-top:8px;
+width:476px;
+-webkit-font-smoothing:subpixel-antialiased;
+
+    
+}
+
+.center-left01
+{
+    line-height:16.08px;
+    display:block;
+	width:500px;
+	height:130px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+    background-color:white;
+    margin-bottom:16px;
+    margin-top:-10px;
+	// overflow:hidden;
+ 
+	
+	
+}
+
+/*اعدادات صندوق الكتابة*/
+.center-left01 .options
+{
+	width:480px;
+	height:40px;
+	overflow:hidden;
+	border-bottom:1px solid #e5e5e5;
+	background-color:white;
+	
+	
+	
+	left:17px;
+}
+
+
+/*كتابة مشاركة*/
+.center-left01 .options a:nth-child(1)
+{
+	width:91px;
+	height:21px;
+	background-color:white;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#5d5899;
+	
+	
+	left:2px;
+}
+.center-left01 .options a:nth-child(1) i
+{
+	font-size:17px;
+	color:#afb3b9;
+	
+	left:0;
+}
+.center-left01 .options a:nth-child(1) p
+{
+	font-size:13px;
+	
+	top:-12px;
+	left:21px;
+}
+/*نهاية كتابة المشاركة*/
+
+/*زر اضافة صورة او فيديو*/
+.center-left01 .options a:nth-child(2)
+{
+	width:121px;
+	height:21px;
+	background-color:white;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#5d5899;
+	
+	left:113px;
+}
+.center-left01 .options a:nth-child(2) i
+{
+	font-size:17px;
+	color:#afb3b9;
+	;
+	left:0;
+}
+.center-left01 .options a:nth-child(2) p
+{
+	font-size:12px;
+	
+	left:23px;
+}
+.center-left01 .options a:nth-child(2):hover
+{
+	background-color:#f5f7f9
+}
+/*نهاية زر اضافة صورة او الفيديو*/
+
+/*زر الفيديو المباشر*/
+.center-left01 .options a:nth-child(3)
+{
+	width:87px;
+	height:21px;
+	background-color:white;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#5d5899;
+	
+	left:256px;
+}
+.center-left01 .options a:nth-child(3) i
+{
+	font-size:17px;
+	color:#afb3b9;
+	
+	left:0;
+}
+.center-left01 .options a:nth-child(3) p
+{
+	font-size:12px;
+	
+	left:23px;
+}
+.center-left01 .options a:nth-child(3):hover
+{
+	background-color:#f5f7f9
+}
+/*نهاية زر الفيديو المباشر*/
+
+/*زر المزيد*/
+.center-left01 .options a:nth-child(4)
+{
+	width:58px;
+	height:21px;
+	background-color:white;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#5d5899;
+	
+	left:364px;
+}
+.center-left01 .options a:nth-child(4) i
+{
+	font-size:17px;
+	color:#afb3b9;
+	
+	left:0;
+}
+.center-left01 .options a:nth-child(4) p
+{
+	font-size:12px;
+	
+	left:23px;
+}
+.center-left01 .options a:nth-child(4):hover
+{
+	background-color:#f5f7f9
+}
+/*نهاية زر المزيد*/
+#submit{
+	margin-left:21rem;
+}
+/*الخطوط الفاصلة*/
+.center-left01 .options .break01, .break02, .break03
+{
+	width:1px;
+	height:15px;
+	background-color:#e5e5e5
+}
+.center-left01 .options .break01
+{
+	
+	left:98px;
+}
+.center-left01 .options .break02
+{
+	
+	left:241px;
+}
+.center-left01 .options .break03
+{
+	
+	left:350px;
+}
+/*نهاية الخطوط الفاصلة*/
+
+/*نهاية اعدادات صندوق الكتابة*/
+
+/*صندوق الكتابة*/
+.center-left01 .writing-box
+{
+	width:400px;
+	height:76px;
+	background-color:white;
+	border-bottom:1px solid #e5e5e5;
+	
+	top:41px;
+    left:17px;
+    margin-left: 0rem;
+    width: 0px;
+    
+}
+.center-left01 .writing-box .imag21
+{
+	width:43px;
+	height:43px;
+	background-color:white;
+	background-image:url("https://img1.mrkzgulf.com/i/00120/xuq8uns8lqhb.jpg");
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	
+    left:3px;
+    ;
+   
+}
+.center-left01 .writing-box form
+{
+    
+	
+	
+    left:48px;
+    margin-left: 0rem;
+    
+   
+}
+.center-left01 .writing-box form textarea
+{
+	width:490px;
+    height:50px;
+    padding-bottom: 4.5rem;
+	border:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#333;
+    margin-top: -4rem
+   
+
+}
+
+.center-left01 .writing-box form textarea:focus {
+    outline-width: 0;
+}
+/*مثلث تابع لـ صندوق الكتابة*/
+.center-left01 .triangle
+{
+	width:0;
+	height:0;
+	border-top:12px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:12px solid #f5f1f1;
+	border-left:10px solid transparent;
+	
+	left:60px
+}
+/*نهاية المثلث التابع لـ صندوق الكتابة*/
+
+/*نهاية صندوق الكتابة*/
+
+/*خيارات اخرى*/
+.center-left01 .other-options
+{
+	width:500px;
+	height:22px;
+	background-color:white;
+    
+    
+	display: inline-flex;
+	margin-top: 2rem;
+    margin-left: 0rem
+    // ;
+    // border: red solid 2px
+}
+.center-left01 .other-options a
+{
+
+	
+    margin-left: 6rem;
+    
+    // 
+    // border: red solid 2px
+}
+
+/*نهاية المزيد من الخيارات*/
+
+/*نهاية خيارات اخرى*/

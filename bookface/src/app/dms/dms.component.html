@@ -1,0 +1,38 @@
+
+
+<div class="chat-box" style="display: block;">
+    <div class="chat-box-header">
+            <img class="icon"  src="https://picsum.photos/150/150"> {{info.first_name}} {{info.last_name}}
+    </div>
+    <div class="chat-box-body">
+        <div class="chat-box-overlay">
+        </div>
+        <div class="chat-logs" >
+                <div *ngFor="let x of messages ">
+            <div *ngIf="x.receiver_id !== my_id; else notShow" id="cm-msg-1" class="chat-msg self" style="" > <span class="msg-avatar">                      </span>
+                <div class="cm-msg-text">{{x.message}} </div>
+            </div>
+            <ng-template #notShow>
+            <div  id="cm-msg-2" class="chat-msg user" style=""> <span class="msg-avatar"> <img class="icon"  src="https://picsum.photos/150/150">          </span>
+                <div class="cm-msg-text">{{x.message}}</div>
+            </div>
+            
+        </ng-template>
+            
+        
+
+         
+
+        </div>
+        <!--chat-log -->
+    </div>
+    <div class="chat-input">
+
+        <form [formGroup]="newMessage">
+                <p *ngIf="post_error">Please make a longer message</p> 
+            <input type="text" id="chat-input" formControlName="message" placeholder="Send a message...">
+            <button type="submit" (click)="send()" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+        </form>
+
+    </div>
+</div>

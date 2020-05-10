@@ -1,0 +1,13 @@
+<div *ngIf="friends .length === 0">
+    0  friends 
+  </div>
+<ul *ngFor="let x of friends ">
+<li>
+    <a href="/messages/{{x.user_id}}">
+        <div class="img">
+        <img src="{{x.picture}}" />  <p>{{x.first_name}} {{x.last_name}}</p>
+    </div>
+    </a>
+</li>
+
+    </ul>

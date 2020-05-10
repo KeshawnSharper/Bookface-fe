@@ -1,0 +1,33 @@
+<p *ngIf="post_error">
+    Please make a longer post
+  </p>
+<div class="status">
+  
+<p class="container">Create Post</p>
+</div>
+<div class="center-left01 status">
+    <div class="triangle status"></div>
+    <div class="writing-box status">
+        <a href="#">
+            <div class="imag21"></div>
+        </a>
+        
+        <form [formGroup]="newPost">
+            <textarea formControlName="message" placeholder="Write something..."></textarea>
+           
+
+        </form>
+    </div>
+    
+    <div class="other-options status">
+            <!-- <button (click)="showthis()"  type="submit">Get all posts</button>  -->
+            <button  (click)="post()"type="submit">Create Post</button> 
+       
+    </div>
+   
+    <div *ngIf="posts.length === 0; else notShow">
+        0 posts
+      </div>
+      <ng-template #notShow>
+    <app-posts-com [posts]="posts"></app-posts-com>
+    </ng-template>

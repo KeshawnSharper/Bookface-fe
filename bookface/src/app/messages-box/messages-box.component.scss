@@ -1,0 +1,35 @@
+body{
+    margin-top: 2.5rem;
+    background:#e9ebee;
+  padding-right: 2rem;
+  width: 100%;
+  }
+   .column-1 {
+    float: left;
+    width: 19%;
+    height: 100%;
+  }
+  .column-2 {
+    float: left;
+    width: 40%;
+    height: 100%;
+  }
+  .column-3 {
+    float: left;
+    width: 30%;
+    height: 100%;
+  }
+  .column-4 {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  
+  /* Clear floats after the columns */
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+  
+  
